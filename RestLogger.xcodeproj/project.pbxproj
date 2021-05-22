@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B201FCB2659116F007A137A /* RestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FCA2659116F007A137A /* RestMethod.swift */; };
+		9B201FCE2659119A007A137A /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FCD2659119A007A137A /* RestRequest.swift */; };
+		9B201FD1265911C1007A137A /* RestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FD0265911C1007A137A /* RestOperation.swift */; };
+		9B201FD4265911EE007A137A /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FD3265911EE007A137A /* RestClient.swift */; };
 		9BA440B526591010008A5830 /* RestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA440B426591010008A5830 /* RestLogger.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B201FCA2659116F007A137A /* RestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestMethod.swift; sourceTree = "<group>"; };
+		9B201FCD2659119A007A137A /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
+		9B201FD0265911C1007A137A /* RestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestOperation.swift; sourceTree = "<group>"; };
+		9B201FD3265911EE007A137A /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		9BA440B126591010008A5830 /* libRestLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRestLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA440B426591010008A5830 /* RestLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				9BA440B426591010008A5830 /* RestLogger.swift */,
+				9B201FCA2659116F007A137A /* RestMethod.swift */,
+				9B201FCD2659119A007A137A /* RestRequest.swift */,
+				9B201FD0265911C1007A137A /* RestOperation.swift */,
+				9B201FD3265911EE007A137A /* RestClient.swift */,
 			);
 			path = RestLogger;
 			sourceTree = "<group>";
@@ -119,7 +131,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B201FCB2659116F007A137A /* RestMethod.swift in Sources */,
+				9B201FD1265911C1007A137A /* RestOperation.swift in Sources */,
 				9BA440B526591010008A5830 /* RestLogger.swift in Sources */,
+				9B201FD4265911EE007A137A /* RestClient.swift in Sources */,
+				9B201FCE2659119A007A137A /* RestRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
