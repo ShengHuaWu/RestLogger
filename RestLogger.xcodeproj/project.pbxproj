@@ -11,8 +11,20 @@
 		9B201FCE2659119A007A137A /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FCD2659119A007A137A /* RestRequest.swift */; };
 		9B201FD1265911C1007A137A /* RestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FD0265911C1007A137A /* RestOperation.swift */; };
 		9B201FD4265911EE007A137A /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FD3265911EE007A137A /* RestClient.swift */; };
+		9B201FDD26591325007A137A /* RestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FDC26591325007A137A /* RestClientTests.swift */; };
+		9B201FDF26591325007A137A /* libRestLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA440B126591010008A5830 /* libRestLogger.a */; };
 		9BA440B526591010008A5830 /* RestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA440B426591010008A5830 /* RestLogger.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B201FE026591325007A137A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA440A926591010008A5830 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA440B026591010008A5830;
+			remoteInfo = RestLogger;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9BA440AF26591010008A5830 /* CopyFiles */ = {
@@ -31,11 +43,22 @@
 		9B201FCD2659119A007A137A /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
 		9B201FD0265911C1007A137A /* RestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestOperation.swift; sourceTree = "<group>"; };
 		9B201FD3265911EE007A137A /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		9B201FDA26591325007A137A /* RestLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B201FDC26591325007A137A /* RestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientTests.swift; sourceTree = "<group>"; };
+		9B201FDE26591325007A137A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA440B126591010008A5830 /* libRestLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRestLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA440B426591010008A5830 /* RestLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B201FD726591325007A137A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B201FDF26591325007A137A /* libRestLogger.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BA440AE26591010008A5830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B201FDB26591325007A137A /* RestLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B201FDC26591325007A137A /* RestClientTests.swift */,
+				9B201FDE26591325007A137A /* Info.plist */,
+			);
+			path = RestLoggerTests;
+			sourceTree = "<group>";
+		};
 		9BA440A826591010008A5830 = {
 			isa = PBXGroup;
 			children = (
 				9BA440B326591010008A5830 /* RestLogger */,
+				9B201FDB26591325007A137A /* RestLoggerTests */,
 				9BA440B226591010008A5830 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9BA440B126591010008A5830 /* libRestLogger.a */,
+				9B201FDA26591325007A137A /* RestLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +111,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B201FD926591325007A137A /* RestLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B201FE226591325007A137A /* Build configuration list for PBXNativeTarget "RestLoggerTests" */;
+			buildPhases = (
+				9B201FD626591325007A137A /* Sources */,
+				9B201FD726591325007A137A /* Frameworks */,
+				9B201FD826591325007A137A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B201FE126591325007A137A /* PBXTargetDependency */,
+			);
+			name = RestLoggerTests;
+			productName = RestLoggerTests;
+			productReference = 9B201FDA26591325007A137A /* RestLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9BA440B026591010008A5830 /* RestLogger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BA440B826591010008A5830 /* Build configuration list for PBXNativeTarget "RestLogger" */;
@@ -103,6 +155,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					9B201FD926591325007A137A = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					9BA440B026591010008A5830 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -122,11 +177,30 @@
 			projectRoot = "";
 			targets = (
 				9BA440B026591010008A5830 /* RestLogger */,
+				9B201FD926591325007A137A /* RestLoggerTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		9B201FD826591325007A137A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		9B201FD626591325007A137A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B201FDD26591325007A137A /* RestClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BA440AD26591010008A5830 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,7 +215,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9B201FE126591325007A137A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA440B026591010008A5830 /* RestLogger */;
+			targetProxy = 9B201FE026591325007A137A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9B201FE326591325007A137A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RestLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.shenghuawu.RestLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B201FE426591325007A137A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RestLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.shenghuawu.RestLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9BA440B626591010008A5830 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,6 +401,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B201FE226591325007A137A /* Build configuration list for PBXNativeTarget "RestLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B201FE326591325007A137A /* Debug */,
+				9B201FE426591325007A137A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BA440AC26591010008A5830 /* Build configuration list for PBXProject "RestLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
