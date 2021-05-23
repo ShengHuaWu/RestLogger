@@ -75,12 +75,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B06C0FD265A5D730069CAB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B06C0F7265A5C5B0069CAB4 /* Dependencies+Tests.swift */,
+				9B06C0ED265A5A5E0069CAB4 /* RestLogger+Tests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9B201FDB26591325007A137A /* RestLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
 				9B201FDC26591325007A137A /* RestClientTests.swift */,
-				9B06C0F7265A5C5B0069CAB4 /* Dependencies+Tests.swift */,
-				9B06C0ED265A5A5E0069CAB4 /* RestLogger+Tests.swift */,
+				9B06C0FD265A5D730069CAB4 /* Helpers */,
 				9B201FDE26591325007A137A /* Info.plist */,
 			);
 			path = RestLoggerTests;

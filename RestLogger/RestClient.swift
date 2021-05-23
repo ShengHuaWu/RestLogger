@@ -9,17 +9,11 @@ enum RestClientError: Error {
 }
 
 final class RestClient {
-    private let urlSession: URLSession
-    
-    init(urlSession: URLSession = .shared) {
-        self.urlSession = urlSession
-    }
-    
     func perform<Resource>(_ operation: RestOperation<Resource>, _ completion: @escaping (Result<Resource, RestClientError>) -> Void) {
         let request = operation.buildRequest().urlRequest
         global.logger.pullback(\.content).record(request)
         
-        let task = urlSession.dataTask(with: request) { [weak self] data, response, error in
+        let task = global.urlSession.dataTask(with: request) { [weak self] data, response, error in
             guard let strongSelf = self else {
                 completion(.failure(.generic(message: "RestClient instance has been deallocated already before the response comes back")))
                 return

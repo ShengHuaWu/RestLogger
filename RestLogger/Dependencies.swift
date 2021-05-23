@@ -1,9 +1,12 @@
+import Foundation
+
 struct Dependencies {
+    var urlSession: URLSession
     var logger: RestLogger<String>
 }
 
 #if DEBUG
-var global = Dependencies(logger: .debug)
+var global = Dependencies(urlSession: .shared, logger: .debug)
 #else
-let global = Dependencies(logger: .debug)
+let global = Dependencies(urlSession: .shared, logger: .debug)
 #endif
