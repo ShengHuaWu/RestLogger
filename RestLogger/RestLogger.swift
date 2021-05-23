@@ -1,7 +1,7 @@
 import Foundation
 
 struct RestLogger<Content> {
-    let record: (Content) -> Void
+    var record: (Content) -> Void
 }
 
 extension RestLogger {

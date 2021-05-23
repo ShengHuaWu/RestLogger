@@ -10,16 +10,14 @@ enum RestClientError: Error {
 
 final class RestClient {
     private let urlSession: URLSession
-    private let logger: RestLogger<String>
     
-    init(_ urlSession: URLSession = .shared, _ logger: RestLogger<String> = .debug) {
+    init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
-        self.logger = logger
     }
     
     func perform<Resource>(_ operation: RestOperation<Resource>, _ completion: @escaping (Result<Resource, RestClientError>) -> Void) {
         let request = operation.buildRequest().urlRequest
-        logger.pullback(\.content).record(request)
+        global.logger.pullback(\.content).record(request)
         
         let task = urlSession.dataTask(with: request) { [weak self] data, response, error in
             guard let strongSelf = self else {
@@ -42,17 +40,17 @@ final class RestClient {
     
     private func sanitize(data: Data?, response: URLResponse?, error: Error?) throws -> Data {
         if let unwrappedError = error {
-            logger.pullback(\.restErrorContent).record(unwrappedError)
+            global.logger.pullback(\.restErrorContent).record(unwrappedError)
             throw RestClientError.networkFailure(unwrappedError)
         }
         
         guard let httpResponse = response as? HTTPURLResponse, 200...299 ~= httpResponse.statusCode else {
             let invalidResponseError = RestClientError.invalidResponse(response)
-            logger.pullback(\.restErrorContent).record(invalidResponseError)
+            global.logger.pullback(\.restErrorContent).record(invalidResponseError)
             throw invalidResponseError
         }
         
-        logger.pullback(\.content).record(httpResponse)
+        global.logger.pullback(\.content).record(httpResponse)
         
         // It might be necessary to parse the data for error as well
         
@@ -60,7 +58,7 @@ final class RestClient {
             throw RestClientError.emptyData
         }
         
-        logger.pullback(\.restResponseContent).record(unwrappedData)
+        global.logger.pullback(\.restResponseContent).record(unwrappedData)
         
         return unwrappedData
     }
