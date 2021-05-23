@@ -38,7 +38,7 @@ final class RestClientTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertEqual(recordCallCount, 3)
+                XCTAssertEqual(recordCallCount, 1)
                 e.fulfill()
             }
         }

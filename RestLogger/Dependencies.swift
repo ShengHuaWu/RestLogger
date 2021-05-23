@@ -2,7 +2,7 @@ import Foundation
 
 struct Dependencies {
     var urlSession: URLSession
-    var logger: RestLogger<String>
+    var logger: RestLogger
 }
 
 #if DEBUG

@@ -1,6 +1,6 @@
 @testable import RestLogger
 
-extension RestLogger where Content == String {
+extension RestLogger {
     static let test = Self { _ in
         fatalError("Unimplemented yet")
     }

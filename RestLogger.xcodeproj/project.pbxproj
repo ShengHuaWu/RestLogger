@@ -10,6 +10,10 @@
 		9B06C0EE265A5A5E0069CAB4 /* RestLogger+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C0ED265A5A5E0069CAB4 /* RestLogger+Tests.swift */; };
 		9B06C0F4265A5BD10069CAB4 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C0F3265A5BD10069CAB4 /* Dependencies.swift */; };
 		9B06C0F8265A5C5B0069CAB4 /* Dependencies+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C0F7265A5C5B0069CAB4 /* Dependencies+Tests.swift */; };
+		9B06C103265A5E100069CAB4 /* URLRequest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C102265A5E100069CAB4 /* URLRequest+Helpers.swift */; };
+		9B06C107265A5E300069CAB4 /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C106265A5E300069CAB4 /* HTTPURLResponse+Helpers.swift */; };
+		9B06C10D265A5E560069CAB4 /* Error+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C10C265A5E560069CAB4 /* Error+Helpers.swift */; };
+		9B06C111265A5E7A0069CAB4 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06C110265A5E7A0069CAB4 /* Data+Helpers.swift */; };
 		9B201FCB2659116F007A137A /* RestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FCA2659116F007A137A /* RestMethod.swift */; };
 		9B201FCE2659119A007A137A /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FCD2659119A007A137A /* RestRequest.swift */; };
 		9B201FD1265911C1007A137A /* RestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201FD0265911C1007A137A /* RestOperation.swift */; };
@@ -45,6 +49,10 @@
 		9B06C0ED265A5A5E0069CAB4 /* RestLogger+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestLogger+Tests.swift"; sourceTree = "<group>"; };
 		9B06C0F3265A5BD10069CAB4 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		9B06C0F7265A5C5B0069CAB4 /* Dependencies+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dependencies+Tests.swift"; sourceTree = "<group>"; };
+		9B06C102265A5E100069CAB4 /* URLRequest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Helpers.swift"; sourceTree = "<group>"; };
+		9B06C106265A5E300069CAB4 /* HTTPURLResponse+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Helpers.swift"; sourceTree = "<group>"; };
+		9B06C10C265A5E560069CAB4 /* Error+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helpers.swift"; sourceTree = "<group>"; };
+		9B06C110265A5E7A0069CAB4 /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		9B201FCA2659116F007A137A /* RestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestMethod.swift; sourceTree = "<group>"; };
 		9B201FCD2659119A007A137A /* RestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
 		9B201FD0265911C1007A137A /* RestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestOperation.swift; sourceTree = "<group>"; };
@@ -84,6 +92,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		9B06C114265A5E950069CAB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B06C102265A5E100069CAB4 /* URLRequest+Helpers.swift */,
+				9B06C106265A5E300069CAB4 /* HTTPURLResponse+Helpers.swift */,
+				9B06C10C265A5E560069CAB4 /* Error+Helpers.swift */,
+				9B06C110265A5E7A0069CAB4 /* Data+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9B201FDB26591325007A137A /* RestLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +134,13 @@
 		9BA440B326591010008A5830 /* RestLogger */ = {
 			isa = PBXGroup;
 			children = (
+				9B06C0F3265A5BD10069CAB4 /* Dependencies.swift */,
 				9BA440B426591010008A5830 /* RestLogger.swift */,
 				9B201FCA2659116F007A137A /* RestMethod.swift */,
 				9B201FCD2659119A007A137A /* RestRequest.swift */,
 				9B201FD0265911C1007A137A /* RestOperation.swift */,
 				9B201FD3265911EE007A137A /* RestClient.swift */,
-				9B06C0F3265A5BD10069CAB4 /* Dependencies.swift */,
+				9B06C114265A5E950069CAB4 /* Helpers */,
 			);
 			path = RestLogger;
 			sourceTree = "<group>";
@@ -224,11 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B06C107265A5E300069CAB4 /* HTTPURLResponse+Helpers.swift in Sources */,
+				9B06C103265A5E100069CAB4 /* URLRequest+Helpers.swift in Sources */,
 				9B06C0F4265A5BD10069CAB4 /* Dependencies.swift in Sources */,
 				9B201FCB2659116F007A137A /* RestMethod.swift in Sources */,
 				9B201FD1265911C1007A137A /* RestOperation.swift in Sources */,
+				9B06C111265A5E7A0069CAB4 /* Data+Helpers.swift in Sources */,
 				9BA440B526591010008A5830 /* RestLogger.swift in Sources */,
 				9B201FD4265911EE007A137A /* RestClient.swift in Sources */,
+				9B06C10D265A5E560069CAB4 /* Error+Helpers.swift in Sources */,
 				9B201FCE2659119A007A137A /* RestRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
